@@ -1,12 +1,19 @@
 #!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
+"""
+Django's command-line utility for administrative tasks.
+We set development settings as default so you don't need to specify
+them every time during local development.
+"""
 import os
 import sys
 
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tutorconnect.settings')
+    # Default to development settings if not specified
+    # In production, this is set via environment variable
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tutorconnect.settings.development')
+    
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
