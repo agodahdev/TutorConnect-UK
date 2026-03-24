@@ -47,13 +47,18 @@ THIRD_PARTY_APPS = [
 
 # Our custom apps - we'll add these as we create them
 LOCAL_APPS = [
+    'apps.accounts',  # User authentication
     # 'apps.core',
-    # 'apps.accounts',
     # 'apps.tutors',
     # 'apps.bookings',
     # 'apps.reviews',
     # 'apps.payments',
 ]
+
+# Custom User Model
+# IMPORTANT: This must be set BEFORE running migrations
+# Tells Django to use our CustomUser instead of the built-in User
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 # Combine all apps
 # Order matters! Django apps first, then third-party, then local
