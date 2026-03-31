@@ -1,13 +1,5 @@
 """
 Tests for the accounts app.
-
-Learning Point: Testing is CRUCIAL for maintaining code quality.
-Django's TestCase provides:
-- Isolated test database (tests don't affect real data)
-- Automatic rollback after each test
-- Assertion methods for common checks
-
-Run tests with: python manage.py test apps.accounts
 """
 
 from django.test import TestCase
