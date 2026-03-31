@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Find Your Perfect Tutor{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-4">Find Your Perfect Tutor</h1>
+        <p class="lead mb-4">Connect with expert tutors across the UK</p>
+        
+        <div class="bg-white rounded-pill p-2 mx-auto" style="max-width: 500px;">
+            <form class="d-flex">
+                <input type="text" class="form-control border-0" placeholder="Search subjects...">
+                <button class="btn btn-primary rounded-pill">Search</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Stats -->
+<section class="bg-white py-4">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3">
+                <h3 class="fw-bold text-primary">1,000+</h3>
+                <p class="text-muted">Verified Tutors</p>
+            </div>
+            <div class="col-md-3">
+                <h3 class="fw-bold text-primary">4.9/5</h3>
+                <p class="text-muted">Average Rating</p>
+            </div>
+            <div class="col-md-3">
+                <h3 class="fw-bold text-primary">100%</h3>
+                <p class="text-muted">DBS Checked</p>
+            </div>
+            <div class="col-md-3">
+                <h3 class="fw-bold text-primary">50,000+</h3>
+                <p class="text-muted">Lessons Booked</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Tutors -->
+<section class="section-padding">
+    <div class="container">
+        <h2 class="text-center mb-5">Featured Tutors</h2>
+        <div class="row g-4">
+            {% for i in "1234" %}
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 text-center p-4">
+                    <div class="rounded-circle bg-primary text-white mx-auto mb-3 d-flex align-items-center justify-content-center" style="width:80px;height:80px;">
+                        <span class="fs-4">T{{ i }}</span>
+                    </div>
+                    <h5>Tutor {{ i }}</h5>
+                    <p class="text-muted small">GCSE Maths</p>
+                    <div class="rating mb-2">★★★★★</div>
+                    <p class="fw-bold text-primary">£35/hour</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">View Profile</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="section-padding bg-white">
+    <div class="container">
+        <h2 class="text-center mb-5">How It Works</h2>
+        <div class="row">
+            <div class="col-md-4 text-center mb-4">
+                <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width:80px;height:80px;">
+                    <i class="bi bi-search text-primary fs-2"></i>
+                </div>
+                <h4>1. Search</h4>
+                <p class="text-muted">Find tutors by subject, level, and location</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width:80px;height:80px;">
+                    <i class="bi bi-calendar-check text-success fs-2"></i>
+                </div>
+                <h4>2. Book</h4>
+                <p class="text-muted">Choose a time and book securely online</p>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width:80px;height:80px;">
+                    <i class="bi bi-mortarboard text-info fs-2"></i>
+                </div>
+                <h4>3. Learn</h4>
+                <p class="text-muted">Meet your tutor and start learning</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-primary text-white section-padding">
+    <div class="container text-center">
+        <h2 class="mb-4">Are You a Tutor?</h2>
+        <p class="lead mb-4">Join our platform and grow your tutoring business</p>
+        <a href="#" class="btn btn-light btn-lg">Become a Tutor</a>
+    </div>
+</section>
+{% endblock %}
