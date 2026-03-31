@@ -39,8 +39,8 @@ DJANGO_APPS = [
 
 # Third-party apps we'll add later
 THIRD_PARTY_APPS = [
-    # 'allauth',                     # We'll add these as we progress
-    # 'allauth.account',
+     'allauth',                     # We'll add these as we progress
+     'allauth.account',
     # 'crispy_forms',
     # 'crispy_bootstrap5',
 ]
@@ -74,6 +74,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware', # User auth
     'django.contrib.messages.middleware.MessageMiddleware', # Flash messages
     'django.middleware.clickjacking.XFrameOptionsMiddleware', # Clickjacking protection
+    'allauth.account.middleware.AccountMiddleware'
 ]
 
 # URL configuration - tells Django where to find URL patterns
@@ -158,3 +159,9 @@ SITE_ID = 1
 LOGIN_URL = 'account_login'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+# Add authentication backends:
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
