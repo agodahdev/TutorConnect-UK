@@ -1,0 +1,65 @@
+/* TutorConnect UK - Custom Styles */
+
+:root {
+    --tc-primary: #0d6efd;
+    --tc-primary-dark: #0a58ca;
+    --tc-font-sans: 'Inter', sans-serif;
+    --tc-font-display: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--tc-font-sans);
+    background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--tc-font-display);
+    font-weight: 600;
+}
+
+/* Navigation */
+.navbar-brand {
+    font-family: var(--tc-font-display);
+    font-size: 1.5rem;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 5rem 0;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+}
+
+/* Section Spacing */
+.section-padding {
+    padding: 5rem 0;
+}
+
+/* Rating Stars */
+.rating {
+    color: #ffc107;
+}
+
+/* Footer */
+.footer a:hover {
+    color: var(--tc-primary) !important;
+}
