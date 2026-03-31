@@ -48,7 +48,7 @@ THIRD_PARTY_APPS = [
 # Our custom apps - we'll add these as we create them
 LOCAL_APPS = [
     'apps.accounts',  # User authentication
-    'apps.core',
+    # 'apps.core',
     # 'apps.tutors',
     # 'apps.bookings',
     # 'apps.reviews',
